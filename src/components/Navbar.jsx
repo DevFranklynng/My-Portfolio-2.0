@@ -73,12 +73,13 @@ export default function Navbar() {
             open
               ? "max-[800px]:opacity-100 max-[800px]:visible max-[800px]:pointer-events-auto max-[800px]:translate-y-0"
               : "max-[800px]:opacity-0 max-[800px]:invisible max-[800px]:pointer-events-none max-[800px]:translate-y-[-10px]"
-          } max-[800px]:absolute max-[800px]:top-[calc(100%+15px)] max-[800px]:left-0 max-[800px]:right-0 max-[800px]:flex-col max-[800px]:gap-0 max-[800px]:p-[10px] max-[800px]:bg-[rgba(20,20,20,0.97)] max-[800px]:border max-[800px]:border-[#303030] max-[800px]:rounded-[18px] max-[800px]:backdrop-blur-[20px] max-[800px]:transition-opacity max-[800px]:transition-visibility max-[800px]:transition-transform max-[800px]:duration-300 max-[800px]:z-[1000]`}
+          } max-[800px]:absolute max-[800px]:top-[calc(100%+15px)] max-[800px]:left-0 max-[800px]:right-0 max-[800px]:flex-col max-[800px]:gap-0 max-[800px]:p-[10px] max-[800px]:bg-[rgba(20,20,20,0.97)] max-[800px]:border max-[800px]:border-[#303030] max-[800px]:rounded-[18px] max-[800px]:backdrop-blur-[20px] max-[800px]:transition-all max-[800px]:duration-300 max-[800px]:z-[1000]`}
         >
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
+              end={link.to === "/"}
               className={({ isActive }) =>
                 `relative text-[13px] transition duration-300 hover:text-orange max-[800px]:w-full max-[800px]:px-[15px] max-[800px]:py-[15px] max-[800px]:rounded-[10px] max-[800px]:text-xs max-[800px]:hover:bg-[#242424] max-[800px]:hover:text-orange ${
                   isActive

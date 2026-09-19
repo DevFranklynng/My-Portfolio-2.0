@@ -33,10 +33,10 @@ export default function About() {
           <div className="about-hero-grid grid grid-cols-[minmax(360px,0.9fr)_minmax(450px,1.1fr)] items-center gap-[clamp(60px,8vw,120px)] max-[950px]:grid-cols-1 max-[950px]:gap-[90px]">
             <div className="about-main-image relative w-[min(100%,500px)] h-[590px] mx-auto max-[600px]:w-[calc(100%-15px)] max-[600px]:h-[440px] max-[380px]:h-[390px]">
               <div
-                className="absolute top-[24px] left-[24px] w-full h-full border border-[rgba(255,159,10,0.55)] rounded-[28px] -rotate-3 bg-orange transition duration-500 max-[600px]:top-[15px] max-[600px]:left-[15px] max-[380px]:top-[10px] max-[380px]:left-[10px]"
+                className="absolute top-[24px] left-[24px] w-full h-full border border-[rgba(255,159,10,0.55)] rounded-[28px] bg-orange transition duration-500 max-[600px]:top-[15px] max-[600px]:left-[15px] max-[380px]:top-[10px] max-[380px]:left-[10px]"
                 style={{ transform: "rotate(-3deg)" }}
               />
-              <div className="absolute inset-[10%] bg-orange opacity-8 blur-[75px] rounded-full z-0" />
+              <div className="absolute inset-[10%] bg-orange opacity-[0.08] blur-[75px] rounded-full z-0" />
 
               <img
                 src="/Assets/Hero-image.png"

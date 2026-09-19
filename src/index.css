@@ -25,9 +25,7 @@
   }
 }
 
-@layer components {
-  .container {
-    width: min(1180px, 90%);
-    margin: 0 auto;
-  }
+.container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
 }

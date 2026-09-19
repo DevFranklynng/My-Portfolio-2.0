@@ -1,4 +1,5 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import SectionLabel from "../components/SectionLabel";
 import { PrimaryButton, SecondaryButton, OutlineButton } from "../components/Buttons";
@@ -188,13 +189,12 @@ export default function Home() {
                     className="w-full h-full object-cover transition duration-500 group-hover:scale-[1.04]"
                   />
                   <div className="project-overlay absolute inset-0 flex items-end justify-end p-5 opacity-0 group-hover:opacity-100 transition duration-[350ms] bg-gradient-to-t from-[rgba(0,0,0,0.65)] to-transparent">
-                    <a
-                      href="/projects"
-                      onClick={(e) => e.preventDefault()}
+                    <Link
+                      to="/projects"
                       className="px-4 py-[11px] bg-orange text-[#111111] rounded-[30px] text-[11px] font-bold inline-flex items-center gap-1"
                     >
                       View Project <ArrowUpRight size={12} strokeWidth={2.5} />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -208,14 +208,13 @@ export default function Home() {
                       {project.description}
                     </p>
                   </div>
-                  <a
-                    href="/projects"
-                    onClick={(e) => e.preventDefault()}
+                  <Link
+                    to="/projects"
                     className="project-arrow shrink-0 w-[42px] h-[42px] grid place-items-center border border-[#383838] rounded-full text-white transition duration-300 hover:bg-orange hover:border-orange hover:text-[#111111] hover:rotate-45"
                     aria-label={`View ${project.name} project`}
                   >
                     <ArrowUpRight size={16} strokeWidth={2.5} />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
