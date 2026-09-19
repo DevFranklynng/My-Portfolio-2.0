@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white font-sans overflow-x-hidden;
+  }
+
+  a {
+    @apply no-underline text-inherit;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button,
+  a {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+  }
+}
