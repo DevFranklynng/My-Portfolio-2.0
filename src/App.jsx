@@ -18,7 +18,21 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
+function AppShell() {
+  const { pathname } = useLocation();
+
+  let footerVariant = "inner";
+  let contactLabel = "Start a conversation";
+  let contactHref = null;
+
+  if (pathname === "/") {
+    footerVariant = "home";
+  } else if (pathname === "/contact") {
+    footerVariant = "contact";
+    contactLabel = "Send an Email";
+    contactHref = "mailto:franklynokoronkwo104@gmail.com";
+  }
+
   return (
     <div className="App">
       <ScrollToTop />
@@ -32,7 +46,11 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer variant={footerVariant} contactLabel={contactLabel} contactHref={contactHref} />
     </div>
   );
+}
+
+export default function App() {
+  return <AppShell />;
 }
